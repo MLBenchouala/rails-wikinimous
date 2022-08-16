@@ -1,0 +1,15 @@
+
+<article>
+  <h1><%= @article.title %></h1>
+  <a href="/articles/<%= @article.id %>/edit"><i class="fa fa-pencil"></i></a>
+  <p> </p>
+  <p> </p>
+  <p><%= @article.content %></p>
+  <p> </p>
+  <p> </p>
+  <p> <i class="fa fa-trash-o"></i> <%= link_to "Delete",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %></p>
+
+</article>
